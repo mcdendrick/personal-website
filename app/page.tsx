@@ -46,7 +46,7 @@ const PersonalWebsite: React.FC = () => {
       <div className="bg-custom-secondary backdrop-blur-sm">
         <div className="max-w-4xl mx-auto px-4 py-16">
           <div className="text-center">
-            <h1 className="text-4xl font-bold">Hello, I'm Taylor McKendrick</h1>
+            <h1 className="text-4xl font-bold">Hello, I&apos;m Taylor McKendrick</h1>
             <p className="text-xl opacity-80 mb-8">Full Stack Developer | Cancer Survivor | Problem Solver</p>
             <div className="flex justify-center space-x-4">
               <a href="https://linkedin.com/in/taylor-mckendrick" className="p-2 opacity-80 hover:opacity-100 transition-opacity">
@@ -69,13 +69,13 @@ const PersonalWebsite: React.FC = () => {
           <h2 className="text-3xl font-bold mb-8">About Me</h2>
           <div className="bg-custom-secondary backdrop-blur-sm rounded-lg p-6">
             <p className="opacity-80 mb-4">
-              I'm a full stack developer with experience in Python, JavaScript, Java, Ruby on Rails, and C++. 
+              I&apos;m a full stack developer with experience in Python, JavaScript, Java, Ruby on Rails, and C++. 
               As a recent graduate from BYU-Hawaii with a 3.97 GPA in Computer Science, I bring a strong 
               foundation in both technical and soft skills.
             </p>
             <p className="opacity-80">
-              I'm fluent in English, Dutch, and Flemish, and have experience working in diverse, 
-              international environments. As a 2024 cancer survivor, I've learned the importance of 
+              I&apos;m fluent in English, Dutch, and Flemish, and have experience working in diverse, 
+              international environments. As a 2024 cancer survivor, I&apos;ve learned the importance of 
               resilience and maintaining a positive outlook while tackling challenges.
             </p>
           </div>
@@ -120,7 +120,7 @@ const PersonalWebsite: React.FC = () => {
               <li>• Minors in Economics and Film</li>
               <li>• Upsilon Pi Epsilon Honors Society Member</li>
               <li>• Phi Kappa Phi Member</li>
-              <li>• 4-year Dean's List recipient</li>
+              <li>• 4-year Dean&apos;s List recipient</li>
             </ul>
           </div>
         </div>
