@@ -18,6 +18,13 @@ const PersonalWebsite: React.FC = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
+      {/* Gradient background */}
+      <div 
+        className="fixed inset-0 z-0"
+        style={{
+          background: 'linear-gradient(45deg, #1e3a8a 0%, #3b82f6 50%, #60a5fa 100%)',
+        }}
+      />
       {/* Cursor light effect */}
       <div 
         className="pointer-events-none fixed inset-0 z-30 transition-transform duration-300"
@@ -26,8 +33,7 @@ const PersonalWebsite: React.FC = () => {
         }}
       />
    
-
-      {/* Rest of the component remains exactly the same */}
+      <div className ="relative z-10">
       {/* Navigation */}
       <nav className="bg-custom-secondary backdrop-blur-sm shadow-lg z-40 relative">
         <div className="max-w-4xl mx-auto px-4 py-4">
@@ -134,6 +140,7 @@ const PersonalWebsite: React.FC = () => {
           </p>
         </div>
       </footer>
+    </div>
     </div>
   );
 };

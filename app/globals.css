@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --background-primary: #1e3a8a; /* Nice blue background */
-  --background-secondary: rgba(30, 58, 138, 0.2); /* Background with 20% opacity */
+  --background-primary: transparent; /* Removes solid background to allow color gradient */
+  --background-secondary: rgba(30, 58, 138, 0.2); /* Keeps the semi-transparent overlay */
   --foreground: #ffffff; /* White text */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: transparent;
     --foreground: #ededed;
   }
 }
