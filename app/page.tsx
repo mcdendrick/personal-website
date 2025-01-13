@@ -85,7 +85,7 @@ const PersonalWebsite: React.FC = () => {
               </p>
             <div className="flex justify-center space-x-6">
             <a 
-                  href="/public/taylor-mckendrick-resume.pdf" 
+                  href="/taylor-mckendrick-resume.pdf" 
                   className="flex items-center gap-2 px-6 py-3 bg-white/10 rounded-lg hover:bg-white/20 transition-all"
                   download
                 >
