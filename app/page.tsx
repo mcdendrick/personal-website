@@ -1,9 +1,11 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import { Github, Linkedin, Mail } from 'lucide-react';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const PersonalWebsite: React.FC = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  <SpeedInsights />
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
