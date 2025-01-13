@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import { Github, Linkedin, Mail, Download, ExternalLink, Code, BookOpen, GraduationCap, Globe, Medal, Heart } from 'lucide-react';
+import { Github, Linkedin, Mail, Download, Code, GraduationCap, Globe, Medal, Heart } from 'lucide-react';
 
 const PersonalWebsite: React.FC = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
