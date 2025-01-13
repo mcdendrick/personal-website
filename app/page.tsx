@@ -22,14 +22,15 @@ const PersonalWebsite: React.FC = () => {
       <div 
         className="fixed inset-0 z-0"
         style={{
-          background: 'linear-gradient(45deg, #1e3a8a 0%, #3b82f6 50%, #60a5fa 100%)',
+          background: 'linear-gradient(45deg, #1a365d 0%, #2563eb 50%, #93c5fd 100%)',
+          opacity: 0.95
         }}
       />
-      {/* Cursor light effect */}
+      {/* Cursor light effect -- now more visible */}
       <div 
         className="pointer-events-none fixed inset-0 z-30 transition-transform duration-300"
         style={{
-          background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255,255,255,0.1), transparent 40%)`
+          background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255,255,255,0.15), transparent 40%)`
         }}
       />
    
