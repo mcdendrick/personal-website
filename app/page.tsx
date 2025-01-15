@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import { Github, Linkedin, Mail, Download, Code, GraduationCap, Globe, Medal, Heart } from 'lucide-react';
+import Image from 'next/image';
 
 const PersonalWebsite: React.FC = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -18,8 +19,34 @@ const PersonalWebsite: React.FC = () => {
       "Languages": ["Python", "JavaScript", "Java", "Ruby", "C++"],
       "Frontend": ["React", "Next.js", "Tailwind CSS", "Bootstrap"],
       "Backend": ["Node.js", "Ruby on Rails", "MongoDB"],
-      "Other": ["Git", "Problem Solving", "Team Leadership", "Multilingual"]
     }
+    
+    const projects = [
+      {
+        title: "Personal Portfolio Website",
+        description: "Modern, responsive portfolio website built with Next.js and Tailwind CSS. Features include dynamic cursor effects, smooth scrolling, and responsive design.",
+        technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+        liveLink: "https://taylormckendrick.com",
+        githubLink: "https://github.com/mcdendrick/personal-website",
+        image: "/website-page-image.png"  // Replace with your actual project image
+      },
+      {
+        title: "1st Professional Mockup",
+        description: "A work in progress of a professional mockup for a client. Built for a Hawaiian company that focuses on the tourism and hospitality industry.",
+        technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+        liveLink: "https://aloha-pencil-website.vercel.app",
+        githubLink: "https://github.com/mcdendrick/aloha-pencil-website",
+        image: "/mockup-page.png"
+      },
+      {
+        title: "Ruby on Rails Twiiter Post",
+        description: "A project that solely focused on the backend and database. Built with Ruby on Rails and PostgreSQL, this project allows users to post and edit tweets, in a test-driven environment.",
+        technologies: ["Ruby on Rails", "MongoDB", "Docker"],
+        liveLink: "https://project3.com",
+        githubLink: "https://github.com/CS401W2018/final-project-mcdendrick",
+        image: "/ruby-github-image.png"
+      }
+    ]
 
     const achievements = [
       {
@@ -34,8 +61,8 @@ const PersonalWebsite: React.FC = () => {
       },
       {
         icon: <Heart className="w-8 h-8" />,
-        title: "Resilient Spirit",
-        description: "2024 Cancer survivor, demonstrating perseverance and strength"
+        title: "2024 Cancer Survivor",
+        description: "Glad to live life every single day"
       }
     ];
 
@@ -64,10 +91,10 @@ const PersonalWebsite: React.FC = () => {
           <div className="flex justify-between items-center">
             <h1 className="text-xl font-bold">Taylor McKendrick</h1>
             <div className="space-x-6">
-              <a href="#achievements" className="opacity-80 hover:opacity-100 transition-opacity">Achievments</a>
+              <a href="#achievements" className="opacity-80 hover:opacity-100 transition-opacity">Achievements</a>
               <a href="#skills" className="opacity-80 hover:opacity-100 transition-opacity">Skills</a>
-              <a href="#experience" className="opacity-80 hover:opacity-100 transition-opacity">Experience</a>
-              <a href="#volunteer" className="opacity-80 hover:opacity-100 transition-opacity">Leadership</a>
+              <a href="#projects" className="opacity-80 hover:opacity-100 transition-opacity">Projects</a>
+              <a href="#education" className="opacity-80 hover:opacity-100 transition-opacity">Education</a>
             </div>
           </div>
         </div>
@@ -80,8 +107,7 @@ const PersonalWebsite: React.FC = () => {
             <h1 className="text-5xl font-bold mb-6">Hello, I&apos;m Taylor McKendrick</h1>
             <p className="text-2xl opacity-90 mb-8">Full Stack Developer | Cancer Survivor | Problem Solver</p>
             <p className="text-xl opacity-80 mb-8 max-w-2xl mx-auto">
-                Multilingual developer fluent in English, Dutch, and Flemish, with a track record of academic excellence 
-                and leadership experience. Seeking software engineering opportunities to create impactful solutions.
+                Multilingual developer fluent in English, Dutch, and Flemish, with a track record of academic excellence.
               </p>
             <div className="flex justify-center space-x-6">
             <a 
@@ -105,138 +131,124 @@ const PersonalWebsite: React.FC = () => {
         </div>
       </div>
 
-{/* Key Achievements Section */}
-<section id="achievements" className="py-20">
-          <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-12">Key Achievements</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {achievements.map((achievement, index) => (
-                <div key={index} className="bg-custom-secondary backdrop-blur-sm rounded-lg p-6 text-center hover:transform hover:scale-105 transition-all">
-                  <div className="flex justify-center mb-4">
-                    {achievement.icon}
-                  </div>
-                  <h3 className="text-xl font-bold mb-3">{achievement.title}</h3>
-                  <p className="opacity-80">{achievement.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Skills Section */}
-        <section id="skills" className="py-20">
-          <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-12 flex items-center gap-3">
-              <Code size={28} />
-              Technical Skills
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {Object.entries(skills).map(([category, skillList]) => (
-                <div key={category} className="bg-custom-secondary backdrop-blur-sm rounded-lg p-6">
-                  <h3 className="text-xl font-bold mb-4">{category}</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {skillList.map(skill => (
-                      <span key={skill} className="px-3 py-1 bg-white/10 rounded-full text-sm">
-                        {skill}
-                      </span>
+      {/* Key Achievements Section */}
+      <section id="achievements" className="py-20">
+                <div className="max-w-6xl mx-auto px-4">
+                  <h2 className="text-3xl font-bold mb-12">Key Achievements</h2>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    {achievements.map((achievement, index) => (
+                      <div key={index} className="bg-custom-secondary backdrop-blur-sm rounded-lg p-6 text-center hover:transform hover:scale-105 transition-all">
+                        <div className="flex justify-center mb-4">
+                          {achievement.icon}
+                        </div>
+                        <h3 className="text-xl font-bold mb-3">{achievement.title}</h3>
+                        <p className="opacity-80">{achievement.description}</p>
+                      </div>
                     ))}
                   </div>
                 </div>
-              ))}
-            </div>
+              </section>
+
+              {/* Skills Section */}
+              <section id="skills" className="py-20">
+                <div className="max-w-6xl mx-auto px-4">
+                  <h2 className="text-3xl font-bold mb-12 flex items-center gap-3">
+                    <Code size={28} />
+                    Technical Skills
+                  </h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {Object.entries(skills).map(([category, skillList]) => (
+                      <div key={category} className="bg-custom-secondary backdrop-blur-sm rounded-lg p-6">
+                        <h3 className="text-xl font-bold mb-4">{category}</h3>
+                        <div className="flex flex-wrap gap-2">
+                          {skillList.map(skill => (
+                            <span key={skill} className="px-3 py-1 bg-white/10 rounded-full text-sm">
+                              {skill}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </section>
+
+              {/* Projects Section */}
+              <section id="projects" className="py-20">
+                <div className="max-w-6xl mx-auto px-4">
+                  <h2 className="text-3xl font-bold mb-12">Featured Projects</h2>
+                  <div className="space-y-12">
+                    {projects.map((project, index) => (
+                      <div 
+                        key={index}
+                        className="bg-custom-secondary backdrop-blur-sm rounded-lg overflow-hidden hover:transform hover:scale-[1.02] transition-all"
+                      >
+                      <div className="md:grid md:grid-cols-2 gap-8">
+                        {/* Project Image */}
+                        <div className="relative h-64 md:h-full">
+                          <Image
+                            src={project.image}
+                            alt={project.title}
+                            fill
+                            className="object-scale-down"
+                            priority={index === 0} // Prioritize the first project image
+                            />
+                        </div>
+                  
+                      {/* Project Details */}
+                      <div className="p-8">
+                      <h3 className="text-2xl font-bold mb-4">{project.title}</h3>
+                      <p className="text-lg opacity-80 mb-6">
+                        {project.description}
+                      </p>
+                    
+                      {/* Technologies Used */}
+                      <div className="mb-6">
+                        <h4 className="text-sm uppercase tracking-wider opacity-70 mb-2">Technologies Used</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {project.technologies.map((tech, techIndex) => (
+                          <span 
+                            key={techIndex}
+                            className="px-3 py-1 bg-white/10 rounded-full text-sm"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    {/* Project Links */}
+                    <div className="flex gap-4">
+                      {project.liveLink && (
+                        <a
+                          href={project.liveLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-lg hover:bg-white/20 transition-all"
+                        >
+                          <Globe size={20} />
+                          Live Demo
+                        </a>
+                      )}
+                      {project.githubLink && (
+                        <a
+                          href={project.githubLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-lg hover:bg-white/20 transition-all"
+                        >
+                          <Github size={20} />
+                          View Code
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
-        </section>
-
-        {/* Experience Section */}
-        <section id="experience" className="py-20">
-          <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-12">Professional Experience</h2>
-            <div className="space-y-8">
-              <div className="bg-custom-secondary backdrop-blur-sm rounded-lg p-8 hover:transform hover:scale-[1.02] transition-all">
-                <div className="flex justify-between items-start mb-4">
-                  <div>
-                    <h3 className="text-xl font-bold">Lead Reading and Writing Tutor</h3>
-                    <p className="text-lg opacity-80">BYU-Hawaii Reading Writing Lab</p>
-                  </div>
-                  <span className="text-sm opacity-70">May 2022 - June 2024</span>
-                </div>
-                <ul className="space-y-3 opacity-80">
-                  <li className="flex items-start gap-2">
-                    • Published 2 interdisciplinary research articles in the Intersections journal by BYUH
-                  </li>
-                  <li className="flex items-start gap-2">
-                    • Led and trained a team of 15+ writing tutors, managing schedules and overseeing productivity
-                  </li>
-                  <li className="flex items-start gap-2">
-                    • Organized 6 workshops with 35+ student attendance, building student trust and awareness
-                  </li>
-                  <li className="flex items-start gap-2">
-                    • Achieved all levels of CRLA certifications to become a master tutor
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-custom-secondary backdrop-blur-sm rounded-lg p-8 hover:transform hover:scale-[1.02] transition-all">
-                <div className="flex justify-between items-start mb-4">
-                  <div>
-                    <h3 className="text-xl font-bold">Teaching Assistant</h3>
-                    <p className="text-lg opacity-80">Microeconomics and Macroeconomics, BYU-Hawaii</p>
-                  </div>
-                  <span className="text-sm opacity-70">Sept 2022 - Sept 2023</span>
-                </div>
-                <ul className="space-y-3 opacity-80">
-                  <li className="flex items-start gap-2">
-                    • Selected by Dr. Gale Pooley, author of bestselling book Superabundance
-                  </li>
-                  <li className="flex items-start gap-2">
-                    • Conducted review sessions for 40+ students, improving overall exam performance
-                  </li>
-                  <li className="flex items-start gap-2">
-                    • Created and graded weekly assessments while providing individual mentoring
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Leadership & Volunteer Section */}
-        <section id="volunteer" className="py-20">
-          <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-12">Leadership & Volunteer Experience</h2>
-            <div className="space-y-8">
-            <div className="bg-custom-secondary backdrop-blur-sm rounded-lg p-8 hover:transform hover:scale-[1.02] transition-all">
-                <div className="flex justify-between items-start mb-4">
-                  <div>
-                    <h3 className="text-xl font-bold">Full-time Volunteer</h3>
-                    <p className="text-lg opacity-80">Church of Jesus Christ of Latter-day Saints</p>
-                  </div>
-                  <span className="text-sm opacity-70">2019 - 2021</span>
-                </div>
-                <ul className="space-y-3 opacity-80">
-                  <li>• Led a team of 6 volunteers, developing goal-setting and time management skills</li>
-                  <li>• Taught religious lessons in English, Dutch, and Flemish</li>
-                  <li>• Facilitated weekly English classes and performed 12+ hours of community service weekly</li>
-                </ul>
-              </div>
-
-              <div className="bg-custom-secondary backdrop-blur-sm rounded-lg p-8 hover:transform hover:scale-[1.02] transition-all">
-                <div className="flex justify-between items-start mb-4">
-                  <div>
-                    <h3 className="text-xl font-bold">Eagle Scout and Senior Patrol Leader</h3>
-                    <p className="text-lg opacity-80">Boy Scouts of America</p>
-                  </div>
-                  <span className="text-sm opacity-70">August 2017</span>
-                </div>
-                <ul className="space-y-3 opacity-80">
-                  <li>• Led 50+ volunteers in community service project, managing 100+ hours of work</li>
-                  <li>• Achieved Eagle Scout rank, the highest possible award in Boy Scouts of America</li>
-                  <li>• Developed leadership skills leading to every troop member becoming an Eagle Scout</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* Education Section */}
         <section id="education" className="py-20">
@@ -318,8 +330,8 @@ const PersonalWebsite: React.FC = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="#experience" className="opacity-80 hover:opacity-100 transition-opacity">
-                      Experience
+                    <a href="#projects" className="opacity-80 hover:opacity-100 transition-opacity">
+                      Projects
                     </a>
                   </li>
                   <li>
