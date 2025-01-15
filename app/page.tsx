@@ -39,6 +39,7 @@ const PersonalWebsite: React.FC = () => {
         image: "/mockup-page.png"
       },
       {
+        // TODO - Add your own projects here
         title: "Ruby on Rails Twiiter Post",
         description: "A project that solely focused on the backend and database. Built with Ruby on Rails and PostgreSQL, this project allows users to post and edit tweets, in a test-driven environment.",
         technologies: ["Ruby on Rails", "MongoDB", "Docker"],

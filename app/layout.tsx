@@ -33,6 +33,8 @@ export const metadata: Metadata = {
     images: 
       {
         url: "/twitter-image",
+        width: 1200,
+        height: 630,
         alt: "Taylor McKendrick - Full Stack Developer",
       },
   },
