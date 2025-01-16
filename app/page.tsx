@@ -43,8 +43,8 @@ const PersonalWebsite: React.FC = () => {
         title: "Ruby on Rails Twiiter Post",
         description: "A project that solely focused on the backend and database. Built with Ruby on Rails and PostgreSQL, this project allows users to post and edit tweets, in a test-driven environment.",
         technologies: ["Ruby on Rails", "MongoDB", "Docker"],
-        liveLink: "https://project3.com",
-        githubLink: "https://github.com/CS401W2018/final-project-mcdendrick",
+        liveLink: "https://github.com/mcdendrick/ruby-post-project",
+        githubLink: "https://github.com/mcdendrick/ruby-post-project",
         image: "/ruby-github-image.png"
       }
     ]
