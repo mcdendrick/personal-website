@@ -1,10 +1,11 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import { Github, Linkedin, Mail, Download, Code, GraduationCap, Globe, Medal, Heart } from 'lucide-react';
+import { Github, Linkedin, Mail, Download, Code, GraduationCap, Globe, Medal, Heart, Menu, X, Phone } from 'lucide-react';
 import Image from 'next/image';
 
 const PersonalWebsite: React.FC = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -67,6 +68,10 @@ const PersonalWebsite: React.FC = () => {
       }
     ];
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div className="min-h-screen relative overflow-hidden">
       {/* Gradient background */}
@@ -87,15 +92,64 @@ const PersonalWebsite: React.FC = () => {
    
       <div className ="relative z-10">
       {/* Navigation */}
-      <nav className="bg-custom-secondary backdrop-blur-sm shadow-lg sticky top-0">
+      <nav className="bg-custom-secondary backdrop-blur-sm shadow-lg sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <h1 className="text-xl font-bold">Taylor McKendrick</h1>
-            <div className="space-x-6">
+            
+            {/* Hamburger menu button - only visible on mobile */}
+            <button 
+              className="md:hidden p-2"
+              onClick={toggleMenu}
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? (
+                <X size={24} /> // X icon when menu is open
+              ) : (
+                <Menu size={24} /> // Hamburger icon when menu is closed
+              )}
+            </button>
+
+            {/* Desktop menu */}
+            <div className="hidden md:flex space-x-6">
               <a href="#achievements" className="opacity-80 hover:opacity-100 transition-opacity">Achievements</a>
               <a href="#skills" className="opacity-80 hover:opacity-100 transition-opacity">Skills</a>
               <a href="#projects" className="opacity-80 hover:opacity-100 transition-opacity">Projects</a>
               <a href="#education" className="opacity-80 hover:opacity-100 transition-opacity">Education</a>
+            </div>
+          </div>
+
+          {/* Mobile menu */}
+          <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'} pt-4`}>
+            <div className="flex flex-col space-y-4">
+              <a 
+                href="#achievements" 
+                className="opacity-80 hover:opacity-100 transition-opacity"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Achievements
+              </a>
+              <a 
+                href="#skills" 
+                className="opacity-80 hover:opacity-100 transition-opacity"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Skills
+              </a>
+              <a 
+                href="#projects" 
+                className="opacity-80 hover:opacity-100 transition-opacity"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Projects
+              </a>
+              <a 
+                href="#education" 
+                className="opacity-80 hover:opacity-100 transition-opacity"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Education
+              </a>
             </div>
           </div>
         </div>
@@ -309,7 +363,7 @@ const PersonalWebsite: React.FC = () => {
                     <span className="opacity-80">Salt Lake City, Utah</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <Mail size={16} />
+                    <Phone size={16} />
                     <a href="tel:+16266650251" className="opacity-80 hover:opacity-100 transition-opacity">
                       (626) 665-0251
                     </a>
