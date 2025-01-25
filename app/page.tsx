@@ -17,19 +17,19 @@ const PersonalWebsite: React.FC = () => {
     }, []);
 
     const skills = {
-      "Languages": ["Python", "JavaScript", "Java", "Ruby", "C++"],
-      "Frontend": ["React", "Next.js", "Tailwind CSS", "Bootstrap"],
-      "Backend": ["Node.js", "Ruby on Rails", "MongoDB"],
+      "Languages": ["Python", "JavaScript", "TypeScript", "Java", "Ruby", "C++"],
+      "Frontend": ["React", "Next.js", "Tailwind CSS", "Shadcn/ui", "Bootstrap", "Recharts"],
+      "Backend": ["Node.js", "Ruby on Rails", "MongoDB", "PostgreSQL", "OpenAI API", "Docker"],
     }
     
     const projects = [
       {
-        title: "Personal Portfolio Website",
-        description: "Modern, responsive portfolio website built with Next.js and Tailwind CSS. Features include dynamic cursor effects, smooth scrolling, and responsive design.",
-        technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
-        liveLink: "https://taylormckendrick.com",
-        githubLink: "https://github.com/mcdendrick/personal-website",
-        image: "/website-page-image.png"  // Replace with your actual project image
+        title: "Customer Sentiment Analysis Dashboard",
+        description: "Built a real-time sentiment analysis platform using Next.js 14 and OpenAI's GPT models. Features include dynamic data visualization, automatic feedback categorization, and historical trend analysis.",
+        technologies: ["Next.js 14", "TypeScript", "OpenAI API", "Tailwind CSS", "Shadcn/ui", "Recharts"],
+        liveLink: "https://sentiment-analyzer-ochre.vercel.app/",
+        githubLink: "https://github.com/mcdendrick/sentiment-analyzer",
+        image: "/sentiment-dashboard.png"
       },
       {
         title: "1st Professional Mockup",
@@ -40,11 +40,18 @@ const PersonalWebsite: React.FC = () => {
         image: "/mockup-page.png"
       },
       {
-        // TODO - Add your own projects here
-        title: "Ruby on Rails Twiiter Post",
+        title: "Personal Portfolio Website",
+        description: "Modern, responsive portfolio website built with Next.js and Tailwind CSS. Features include dynamic cursor effects, smooth scrolling, and responsive design.",
+        technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+        liveLink: "https://taylormckendrick.com",
+        githubLink: "https://github.com/mcdendrick/personal-website",
+        image: "/website-page-image.png"
+      },
+      {
+        title: "Ruby on Rails Twitter Post",
         description: "A project that solely focused on the backend and database. Built with Ruby on Rails and PostgreSQL, this project allows users to post and edit tweets, in a test-driven environment.",
         technologies: ["Ruby on Rails", "MongoDB", "Docker"],
-        //liveLink: "https://github.com/mcdendrick/ruby-post-project",
+        liveLink: "Demo coming soon",
         githubLink: "https://github.com/mcdendrick/ruby-post-project",
         image: "/ruby-github-image.png"
       }
@@ -275,15 +282,22 @@ const PersonalWebsite: React.FC = () => {
                     {/* Project Links */}
                     <div className="flex gap-4">
                       {project.liveLink && (
-                        <a
-                          href={project.liveLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-lg hover:bg-white/20 transition-all"
-                        >
-                          <Globe size={20} />
-                          Live Demo
-                        </a>
+                        project.liveLink.startsWith('http') ? (
+                          <a
+                            href={project.liveLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-lg hover:bg-white/20 transition-all"
+                          >
+                            <Globe size={20} />
+                            Live Demo
+                          </a>
+                        ) : (
+                          <span className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-lg">
+                            <Globe size={20} />
+                            {project.liveLink}
+                          </span>
+                        )
                       )}
                       {project.githubLink && (
                         <a
