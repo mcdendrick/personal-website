@@ -66,7 +66,7 @@ const PersonalWebsite: React.FC = () => {
       {
         icon: <Medal className="w-8 h-8" />,
         title: "Academic Excellence",
-        description: "3.97 GPA in Computer Science, top 10% of CIS students"
+        description: "3.96 GPA in Computer Science, top 10% of CIS students"
       },
       {
         icon: <Heart className="w-8 h-8" />,
@@ -334,7 +334,7 @@ const PersonalWebsite: React.FC = () => {
                 </div>
                 <div className="text-right">
                   <span className="text-sm opacity-70">June 2024</span>
-                  <p className="font-bold">GPA: 3.97</p>
+                  <p className="font-bold">GPA: 3.96</p>
                 </div>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
