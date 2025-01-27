@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Taylor McKendrick's Portfolio
 
-## Getting Started
+Welcome to my personal portfolio website, built with Next.js and modern web technologies. This site serves as a showcase of my professional experience, projects, and technical skills.
 
-First, run the development server:
+## 🚀 Features
+
+- Modern, responsive design
+- Server-side rendered pages for optimal performance
+- Interactive project showcase
+- Professional resume access
+- Contact information and social links
+
+## 🛠️ Technology Stack
+
+- **Framework**: [Next.js 14](https://nextjs.org)
+- **Styling**: Tailwind CSS
+- **Deployment**: Vercel
+- **Font**: Geist (Vercel's new font family)
+
+## 🔧 Local Development
+
+To run this project locally:
 
 ```bash
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📫 Contact
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Feel free to reach out to me through:
+- [LinkedIn](https://www.linkedin.com/in/taylor-mckendrick/)
+- [GitHub](https://github.com/mcdendrick)
+- [Email](taylormckendrick@gmail.com)
 
-## Learn More
+## 📄 License
 
-To learn more about Next.js, take a look at the following resources:
+This project is open source and available under the MIT License.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Built with ❤️ by Taylor McKendrick
