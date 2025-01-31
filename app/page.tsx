@@ -14,7 +14,7 @@ const ProjectDescription: React.FC<{ text: string }> = ({ text }) => {
           rel="noopener noreferrer"
           className="text-blue-300 hover:text-blue-400 underline"
         >
-          Gladden Design's Paper Apps™ GOLF
+          Gladden Design&apos;s Paper Apps™ GOLF
         </a>{' '}
         notebook game, reimagined as an interactive web application. Built with modern web development practices and clean architecture principles. Original concept by{' '}
         <a 
