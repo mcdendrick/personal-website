@@ -3,6 +3,34 @@ import React, { useState, useEffect } from 'react';
 import { Github, Linkedin, Mail, Download, Code, GraduationCap, Globe, Medal, Heart, Menu, X, Phone } from 'lucide-react';
 import Image from 'next/image';
 
+const ProjectDescription: React.FC<{ text: string }> = ({ text }) => {
+  if (text.includes('Gladden Design')) {
+    return (
+      <>
+        A digital adaptation of{' '}
+        <a 
+          href="https://gladdendesign.com/products/paper-apps-golf" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="text-blue-300 hover:text-blue-400 underline"
+        >
+          Gladden Design's Paper Apps™ GOLF
+        </a>{' '}
+        notebook game, reimagined as an interactive web application. Built with modern web development practices and clean architecture principles. Original concept by{' '}
+        <a 
+          href="https://gladdendesign.com" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="text-blue-300 hover:text-blue-400 underline"
+        >
+          Gladden Design
+        </a>.
+      </>
+    );
+  }
+  return <>{text}</>;
+};
+
 const PersonalWebsite: React.FC = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,7 +54,7 @@ const PersonalWebsite: React.FC = () => {
       {
         title: "Customer Sentiment Analysis Dashboard",
         description: "Built a real-time sentiment analysis platform using Next.js 14 and OpenAI's GPT models. Features include dynamic data visualization, automatic feedback categorization, and historical trend analysis.",
-        technologies: ["Next.js 14", "TypeScript", "OpenAI API", "Tailwind CSS", "Shadcn/ui", "Recharts"],
+        technologies: ["Next.js", "TypeScript", "OpenAI API", "Tailwind CSS", "Shadcn/ui", "Recharts"],
         liveLink: "https://sentiment-analyzer-ochre.vercel.app/",
         githubLink: "https://github.com/mcdendrick/sentiment-analyzer",
         image: "/sentiment-dashboard.png"
@@ -38,6 +66,14 @@ const PersonalWebsite: React.FC = () => {
         liveLink: "https://aloha-pencil-website.vercel.app",
         githubLink: "https://github.com/mcdendrick/aloha-pencil-website",
         image: "/mockup-page.png"
+      },
+      {
+        title: "Paper Golf Game",
+        description: "A digital adaptation of <a href='https://gladdendesign.com/products/paper-apps-golf' target='_blank' rel='noopener noreferrer'>Gladden Design's Paper Apps™ GOLF</a> notebook game, reimagined as an interactive web application. Built with modern web development practices and clean architecture principles. Original concept by <a href='https://gladdendesign.com' target='_blank' rel='noopener noreferrer'>Gladden Design</a>.",
+        technologies: ["Next.js", "TypeScript", "Tailwind CSS", "React Hooks", "ESLint", "PostCSS"],
+        liveLink: "https://paper-golf-game-nine.vercel.app",
+        githubLink: "https://github.com/mcdendrick/paper-golf-game",
+        image: "/paper-golf-game.png"
       },
       {
         title: "Personal Portfolio Website",
@@ -261,7 +297,7 @@ const PersonalWebsite: React.FC = () => {
                       <div className="p-8">
                       <h3 className="text-2xl font-bold mb-4">{project.title}</h3>
                       <p className="text-lg opacity-80 mb-6">
-                        {project.description}
+                        <ProjectDescription text={project.description} />
                       </p>
                     
                       {/* Technologies Used */}
