@@ -60,7 +60,15 @@ const PersonalWebsite: React.FC = () => {
         image: "/sentiment-dashboard.png"
       },
       {
-        title: "1st Professional Mockup",
+        title: "Writing Excellence - Tutoring Platform",
+        description: "A professional tutoring platform with secure payment processing. Built with Next.js 14 and integrated with Stripe API for handling multiple tutoring packages. Features include responsive design, secure payment processing, and smooth animations.",
+        technologies: ["Next.js 14", "TypeScript", "Stripe API", "Tailwind CSS", "Framer Motion"],
+        liveLink: "https://tutor-website-inky.vercel.app/",
+        githubLink: "https://github.com/mcdendrick/tutor-website",
+        image: "/tutor-vert.png"
+      },
+      {
+        title: "Professional eCommerce Mockup",
         description: "A work in progress of a professional mockup for a client. Built for a Hawaiian company that focuses on the tourism and hospitality industry.",
         technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
         liveLink: "https://aloha-pencil-website.vercel.app",
@@ -74,14 +82,6 @@ const PersonalWebsite: React.FC = () => {
         liveLink: "https://paper-golf-game-nine.vercel.app",
         githubLink: "https://github.com/mcdendrick/paper-golf-game",
         image: "/paper-golf-game.png"
-      },
-      {
-        title: "Personal Portfolio Website",
-        description: "Modern, responsive portfolio website built with Next.js and Tailwind CSS. Features include dynamic cursor effects, smooth scrolling, and responsive design.",
-        technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
-        liveLink: "https://taylormckendrick.com",
-        githubLink: "https://github.com/mcdendrick/personal-website",
-        image: "/website-page-image.png"
       },
       {
         title: "Ruby on Rails Twitter Post",
