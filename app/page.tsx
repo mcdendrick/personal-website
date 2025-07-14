@@ -106,7 +106,7 @@ const PersonalWebsite: React.FC = () => {
       },
       {
         icon: <Heart className="w-8 h-8" />,
-        title: "2024 Cancer Survivor",
+        title: "Cancer Survivor",
         description: "Glad to live life every single day"
       }
     ];
